@@ -116,6 +116,7 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 9px;
   min-height: 46px;
   padding: 0 18px;
   border-radius: 6px;
@@ -282,6 +283,9 @@ h3 {
 }
 
 .hero-facts span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 9px 12px;
   color: rgba(255, 255, 255, 0.92);
   background: rgba(255, 255, 255, 0.12);
@@ -299,9 +303,20 @@ h3 {
 }
 
 .quick-strip a {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-content: center;
+  align-items: center;
   min-height: 112px;
   padding: 26px clamp(20px, 4vw, 56px);
   border-right: 1px solid var(--line);
+}
+
+.quick-strip .app-icon {
+  grid-row: 1 / span 2;
+  width: 34px;
+  height: 34px;
+  color: var(--blue-dark);
 }
 
 .quick-strip strong,
@@ -390,14 +405,18 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 48px;
-  height: 34px;
+  width: 52px;
+  height: 42px;
   margin-bottom: 30px;
-  padding: 0 10px;
   color: var(--orange);
   background: var(--paper);
   border-radius: 6px;
   font-weight: 900;
+}
+
+.service-icon .app-icon {
+  width: 28px;
+  height: 28px;
 }
 
 .image-band {
@@ -446,6 +465,12 @@ h3 {
   font-weight: 900;
 }
 
+.timeline span .app-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+}
+
 .timeline p {
   color: var(--muted);
   line-height: 1.62;
@@ -476,11 +501,20 @@ h3 {
 }
 
 .check-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding: 16px 18px;
   background: var(--white);
   border-left: 5px solid var(--orange);
   border-radius: 6px;
   font-weight: 800;
+}
+
+.check-list .app-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--blue-dark);
 }
 
 .pricing {
@@ -499,6 +533,13 @@ h3 {
 
 .price-grid article {
   min-height: 220px;
+}
+
+.price-grid article > .app-icon {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 20px;
+  color: var(--orange);
 }
 
 .price {
@@ -530,10 +571,19 @@ h3 {
 }
 
 .region-panel span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 12px 14px;
   background: var(--white);
   border-radius: 6px;
   font-weight: 800;
+}
+
+.region-panel .app-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--orange);
 }
 
 .gallery {
@@ -758,6 +808,10 @@ h3 {
 }
 
 .slot-grid button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   min-height: 48px;
   padding: 10px 12px;
   border: 1px solid #d7c9c2;
@@ -767,6 +821,16 @@ h3 {
   font: inherit;
   font-weight: 900;
   cursor: pointer;
+}
+
+.slot-grid .app-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--blue-dark);
+}
+
+.slot-grid button.is-selected .app-icon {
+  color: var(--white);
 }
 
 .booking-summary {
@@ -822,13 +886,22 @@ h3 {
 
 .app-buttons a {
   display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 0 10px;
+  align-items: center;
   min-width: 178px;
   min-height: 64px;
-  justify-content: start;
   padding: 12px 18px;
   color: var(--ink);
   background: var(--paper);
   border-radius: 8px;
+}
+
+.app-buttons .app-icon {
+  grid-row: 1 / span 2;
+  width: 30px;
+  height: 30px;
+  color: var(--blue-dark);
 }
 
 .app-buttons span {
@@ -857,6 +930,19 @@ h3 {
 
 .contact-lines a {
   color: var(--blue);
+}
+
+.contact-lines a,
+.contact-lines span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-lines .app-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--orange);
 }
 
 .contact-form {
@@ -927,6 +1013,9 @@ textarea {
 }
 
 .footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--amber);
   font-weight: 900;
 }
@@ -940,6 +1029,7 @@ textarea {
   min-height: 48px;
   padding: 0 16px;
   align-items: center;
+  gap: 8px;
   color: var(--white);
   background: linear-gradient(135deg, var(--orange), var(--amber));
   border-radius: 6px;
@@ -2035,6 +2125,27 @@ textarea {
   color: var(--muted);
   font-size: 1.08rem;
   line-height: 1.65;
+}
+
+.header-call .app-icon,
+.btn .app-icon,
+.footer .app-icon,
+.sticky-call .app-icon,
+.hero-facts .app-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+}
+
+.price-grid article > .app-icon,
+.quick-strip .app-icon,
+.service-icon .app-icon,
+.timeline .app-icon,
+.check-list .app-icon,
+.region-panel .app-icon,
+.contact-lines .app-icon,
+.app-buttons .app-icon {
+  border-width: 2px;
 }
 
 @media (max-width: 1080px) {
