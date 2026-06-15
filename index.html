@@ -14,13 +14,16 @@
   <body>
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="RIOLFIX startpagina">
-        <img src="assets/riolfix-logo-crop.png" alt="RIOLFIX" />
+        <img class="logo-light" src="assets/riolfix-logo-blue.png" alt="RIOLFIX" />
+        <img class="logo-dark" src="assets/riolfix-logo-blue.png" alt="" aria-hidden="true" />
       </a>
       <nav class="nav" aria-label="Hoofdnavigatie">
         <a href="#diensten">Diensten</a>
         <a href="#werkwijze">Werkwijze</a>
         <a href="#prijzen">Prijzen</a>
+        <a href="#boeking">Boeking</a>
         <a href="#regio">Regio</a>
+        <a href="app.html">App</a>
         <a href="#contact">Contact</a>
       </nav>
       <a class="header-call" href="tel:+32488123456">Bel 0488 123 456</a>
@@ -34,7 +37,9 @@
       <a href="#diensten">Diensten</a>
       <a href="#werkwijze">Werkwijze</a>
       <a href="#prijzen">Prijzen</a>
+      <a href="#boeking">Boeking</a>
       <a href="#regio">Regio</a>
+      <a href="app.html">App</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -169,7 +174,7 @@
             <li>Respectvolle techniekers, nette oplevering</li>
           </ul>
         </div>
-        <img src="assets/back-technician.png" alt="RIOLFIX technieker bij servicewagen in Antwerpen" />
+        <img src="assets/team-yard.png" alt="RIOLFIX ploeg met zichtbare gezichten bij servicewagens" />
       </section>
 
       <section class="section pricing" id="prijzen" aria-labelledby="prijzen-title">
@@ -222,10 +227,114 @@
           <h2 id="gallery-title">Herkenbaar, netjes en klaar voor interventie</h2>
         </div>
         <div class="gallery-grid">
-          <img src="assets/before-after-yard-1.png" alt="Voor en na afvoerreiniging aan woning door RIOLFIX" />
-          <img src="assets/before-after-street-1.png" alt="Voor en na straatkolk reinigen door RIOLFIX" />
-          <img src="assets/before-after-yard-2.png" alt="RIOLFIX ontstopping met proper resultaat bij oprit" />
-          <img src="assets/before-after-street-2.png" alt="RIOLFIX interventie voor verstopte straatkolk" />
+          <img src="assets/intervention-team.png" alt="RIOLFIX ploeg tijdens een rioolinterventie aan een woning" />
+          <img src="assets/field-crew.png" alt="RIOLFIX techniekers bereiden preventieve reiniging voor" />
+        </div>
+      </section>
+
+      <section class="section booking" id="boeking" aria-labelledby="booking-title">
+        <div class="booking-copy">
+          <p class="eyebrow blue">Online booking</p>
+          <h2 id="booking-title">Plan uw reiniging wanneer het u past.</h2>
+          <p>
+            Kies een moment voor preventieve afvoer- of rioolreiniging. Handig voor woningen,
+            appartementsgebouwen, horeca en bedrijven die problemen liever voor zijn.
+          </p>
+          <div class="booking-discount">
+            <span class="discount-amount">€20 korting</span>
+            <strong>Boek uw geplande reiniging minstens 1 maand op voorhand</strong>
+            <span>De korting wordt meteen vermeld bij uw boekingsaanvraag.</span>
+          </div>
+        </div>
+        <form class="booking-form" action="mailto:info@riolfix.be" method="post" enctype="text/plain">
+          <div class="form-row">
+            <label>
+              Naam
+              <input name="naam" autocomplete="name" required />
+            </label>
+            <label>
+              Telefoon
+              <input name="telefoon" autocomplete="tel" required />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Gemeente
+              <input name="gemeente" autocomplete="address-level2" required />
+            </label>
+            <label>
+              Type locatie
+              <select name="type_locatie" required>
+                <option value="">Kies type</option>
+                <option>Woning</option>
+                <option>Appartement / syndicus</option>
+                <option>Horeca</option>
+                <option>Bedrijf</option>
+              </select>
+            </label>
+          </div>
+          <div class="calendar-booker" data-calendar>
+            <div class="calendar-head">
+              <button type="button" class="calendar-nav" data-calendar-prev aria-label="Vorige maand">‹</button>
+              <strong data-calendar-title>Maand</strong>
+              <button type="button" class="calendar-nav" data-calendar-next aria-label="Volgende maand">›</button>
+            </div>
+            <div class="calendar-weekdays" aria-hidden="true">
+              <span>Ma</span>
+              <span>Di</span>
+              <span>Wo</span>
+              <span>Do</span>
+              <span>Vr</span>
+              <span>Za</span>
+              <span>Zo</span>
+            </div>
+            <div class="calendar-grid" data-calendar-grid aria-label="Kies datum"></div>
+            <div class="calendar-legend">
+              <span><i></i> €20 korting vanaf 1 maand vooraf</span>
+            </div>
+            <input type="hidden" name="datum" data-selected-date required />
+          </div>
+          <div class="slot-picker">
+            <span class="slot-label">Kies een vrij moment</span>
+            <div class="slot-grid" data-slot-grid>
+              <button type="button" data-slot="08:00 - 10:00">08:00 - 10:00</button>
+              <button type="button" data-slot="10:00 - 12:00">10:00 - 12:00</button>
+              <button type="button" data-slot="13:00 - 15:00">13:00 - 15:00</button>
+              <button type="button" data-slot="15:00 - 17:00">15:00 - 17:00</button>
+              <button type="button" data-slot="18:00 - 20:00">18:00 - 20:00</button>
+            </div>
+            <input type="hidden" name="voorkeurmoment" data-selected-slot required />
+          </div>
+          <div class="booking-summary" data-booking-summary>
+            <strong>Nog geen moment gekozen</strong>
+            <span>Selecteer een datum en tijdslot voor uw geplande reiniging.</span>
+          </div>
+          <label>
+            Wat wilt u laten reinigen?
+            <textarea name="geplande_reiniging" rows="4" placeholder="Bijvoorbeeld: keukenafvoer, regenwaterput, hoofdriolering, periodiek onderhoud horeca..." required></textarea>
+          </label>
+          <button class="btn primary" type="submit">Plan reiniging</button>
+        </form>
+      </section>
+
+      <section class="app-download" aria-labelledby="app-title">
+        <div>
+          <p class="eyebrow">RIOLFIX app</p>
+          <h2 id="app-title">Sneller opnieuw boeken.</h2>
+          <p>
+            Download de app voor herhaalboekingen, vaste onderhoudsplannen en herinneringen
+            voor geplande reinigingen.
+          </p>
+        </div>
+        <div class="app-buttons" aria-label="Downloadopties">
+          <a href="app.html" aria-label="Open de RIOLFIX app">
+            <span>Download in de</span>
+            <strong>App Store</strong>
+          </a>
+          <a href="app.html" aria-label="Open de RIOLFIX app">
+            <span>Download op</span>
+            <strong>Google Play</strong>
+          </a>
         </div>
       </section>
 
@@ -265,7 +374,7 @@
     </main>
 
     <footer class="footer">
-      <img src="assets/riolfix-logo-crop.png" alt="RIOLFIX" />
+      <img src="assets/riolfix-logo-light.png" alt="RIOLFIX" />
       <p>Ontstoppings- & riooldiensten · 24/7 spoedservice · Provincie Antwerpen</p>
       <a href="tel:+32488123456">0488 123 456</a>
     </footer>
