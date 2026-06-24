@@ -390,6 +390,11 @@ h3 {
   border-color: var(--blue);
 }
 
+.service-card.discount-card {
+  border-color: var(--orange);
+  box-shadow: inset 0 4px 0 var(--orange);
+}
+
 .service-card p,
 .price-grid span,
 .fine-print {
@@ -437,7 +442,7 @@ h3 {
 
 .image-band {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 0;
   background: var(--blue-dark);
 }
@@ -1489,9 +1494,7 @@ textarea {
 
 .mobile-app-stage {
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: minmax(320px, 430px) minmax(260px, 420px);
-  gap: clamp(26px, 6vw, 86px);
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: clamp(28px, 5vw, 70px);
@@ -1599,6 +1602,29 @@ textarea {
   background:
     linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(242, 231, 225, 0.96)),
     var(--white);
+}
+
+.business-entry {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 24px;
+  gap: 10px;
+  align-items: center;
+  padding: 14px;
+  color: var(--blue-dark);
+  background: #edf1ff;
+  border-radius: 12px;
+}
+
+.business-entry span {
+  color: var(--blue-dark);
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.35;
+  text-transform: none;
+}
+
+.business-entry strong {
+  display: block;
 }
 
 .mini-label {
@@ -2361,19 +2387,27 @@ textarea {
 
 .native-tabbar {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 4px;
   padding: 8px;
   background: rgba(17, 17, 17, 0.94);
 }
 
 .native-tabbar a {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
   padding: 10px 4px;
   color: var(--white);
   border-radius: 11px;
   font-size: 0.71rem;
   font-weight: 900;
   text-align: center;
+}
+
+.native-tabbar .app-icon {
+  width: 21px;
+  height: 21px;
 }
 
 .native-tabbar a:hover {
@@ -2413,6 +2447,35 @@ textarea {
 .contact-lines .app-icon,
 .app-buttons .app-icon {
   border-width: 2px;
+}
+
+/* Lucide icons replace the old decorative CSS glyphs with recognisable symbols. */
+.app-icon,
+.header-call .app-icon,
+.btn .app-icon,
+.footer .app-icon,
+.sticky-call .app-icon,
+.hero-facts .app-icon,
+.price-grid article > .app-icon,
+.quick-strip .app-icon,
+.service-icon .app-icon,
+.timeline .app-icon,
+.check-list .app-icon,
+.region-panel .app-icon,
+.contact-lines .app-icon,
+.app-buttons .app-icon {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: 0;
+  stroke-width: 2.2;
+}
+
+.app-icon::before,
+.app-icon::after {
+  display: none;
 }
 
 @media (max-width: 1080px) {

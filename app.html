@@ -6,7 +6,7 @@
     <title>RIOLFIX App | Mobiele boeking en onderhoud</title>
     <meta
       name="description"
-      content="Mobiele RIOLFIX app voor spoed, preventief onderhoud, afspraken, rapporten, facturen en B2B locaties."
+      content="Mobiele RIOLFIX app voor spoed, preventief onderhoud, afspraken volgen en werkrapporten."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -25,66 +25,69 @@
 
         <div class="native-screen">
           <section class="native-home" id="home">
-            <p class="mini-label">RIOLFIX app</p>
-            <h1>Wat is er?</h1>
-            <p class="screen-subtitle">Tik op 1 knop. Wij helpen u verder.</p>
-            <img class="native-hero-photo" src="assets/field-crew.png" alt="RIOLFIX techniekers klaar voor interventie" />
+            <p class="mini-label">Hallo, welkom</p>
+            <h1>Hoe kunnen we helpen?</h1>
 
             <article class="native-action emergency-action">
-              <span>Nu hulp nodig?</span>
-              <h2><i class="app-icon icon-alert" aria-hidden="true"></i>Er is iets verstopt</h2>
+              <span>Spoed</span>
+              <h2><i data-lucide="siren" class="app-icon" aria-hidden="true"></i>Nu hulp nodig?</h2>
               <div class="native-tags">
-                <button><i class="app-icon icon-pipe" aria-hidden="true"></i>Afvoer dicht</button>
-                <button><i class="app-icon icon-home" aria-hidden="true"></i>Toilet dicht</button>
-                <button><i class="app-icon icon-smell" aria-hidden="true"></i>Vieze geur</button>
-                <button><i class="app-icon icon-water" aria-hidden="true"></i>Water blijft staan</button>
+                <button><i data-lucide="wrench" class="app-icon" aria-hidden="true"></i>Afvoer dicht</button>
+                <button><i data-lucide="toilet" class="app-icon" aria-hidden="true"></i>Toilet dicht</button>
+                <button><i data-lucide="wind" class="app-icon" aria-hidden="true"></i>Vieze geur</button>
+                <button><i data-lucide="waves" class="app-icon" aria-hidden="true"></i>Water blijft staan</button>
               </div>
               <div class="native-actions">
-                <a href="tel:+32488123456"><i class="app-icon icon-phone" aria-hidden="true"></i>Bel nu</a>
-                <a href="https://wa.me/32488123456"><i class="app-icon icon-chat" aria-hidden="true"></i>WhatsApp</a>
+                <a href="tel:+32488123456"><i data-lucide="phone-call" class="app-icon" aria-hidden="true"></i>Bel nu</a>
+                <a href="https://wa.me/32488123456"><i data-lucide="message-circle" class="app-icon" aria-hidden="true"></i>WhatsApp</a>
               </div>
             </article>
 
             <article class="native-action plan-action">
-              <span>Geen spoed?</span>
-              <h2><i class="app-icon icon-calendar" aria-hidden="true"></i>Plan een schoonmaak</h2>
+              <span>Geen spoed</span>
+              <h2><i data-lucide="calendar-check-2" class="app-icon" aria-hidden="true"></i>Plan onderhoud</h2>
               <div class="discount-pill">€20 korting</div>
-              <p>Boek voor volgende maand. Zo blijft alles proper.</p>
-              <a class="native-primary" href="#plan"><i class="app-icon icon-check" aria-hidden="true"></i>Plan nu</a>
+              <p>Boek voor volgende maand en voorkom nieuwe verstoppingen.</p>
+              <a class="native-primary" href="#plan"><i data-lucide="arrow-right" class="app-icon" aria-hidden="true"></i>Kies onderhoud</a>
             </article>
+
+            <a class="business-entry" href="#plan">
+              <i data-lucide="building-2" class="app-icon" aria-hidden="true"></i>
+              <span><strong>Bedrijf of gebouw?</strong> Plan onderhoud op maat.</span>
+              <i data-lucide="chevron-right" class="app-icon" aria-hidden="true"></i>
+            </a>
           </section>
 
           <section class="native-card" id="plan">
             <div class="native-card-head">
               <span>1 van 4</span>
-              <h2>Wat maken we schoon?</h2>
+              <h2>Kies een dienst</h2>
             </div>
-            <img class="native-card-photo" src="assets/intervention-team.png" alt="RIOLFIX ploeg aan het werk" />
             <div class="native-service-list">
               <button>
-                <i class="app-icon icon-kitchen" aria-hidden="true"></i>
+                <i data-lucide="utensils" class="app-icon" aria-hidden="true"></i>
                 <strong>Keuken</strong>
-                <span>Vet · vanaf €119</span>
+                <span>±60 min · vanaf €129</span>
               </button>
               <button>
-                <i class="app-icon icon-bath" aria-hidden="true"></i>
+                <i data-lucide="bath" class="app-icon" aria-hidden="true"></i>
                 <strong>Badkamer</strong>
-                <span>Douche · vanaf €119</span>
+                <span>±60 min · vanaf €129</span>
               </button>
               <button class="is-active">
-                <i class="app-icon icon-pipe" aria-hidden="true"></i>
-                <strong>Grote buis</strong>
-                <span>Komt terug · €109</span>
+                <i data-lucide="waves" class="app-icon" aria-hidden="true"></i>
+                <strong>Hoofdleiding</strong>
+                <span>60-90 min · vanaf €109 met korting</span>
               </button>
               <button>
-                <i class="app-icon icon-home" aria-hidden="true"></i>
-                <strong>Woning</strong>
-                <span>Alles checken · €109</span>
+                <i data-lucide="house" class="app-icon" aria-hidden="true"></i>
+                <strong>Hele woning</strong>
+                <span>±90 min · vanaf €109 met korting</span>
               </button>
               <button>
-                <i class="app-icon icon-building" aria-hidden="true"></i>
+                <i data-lucide="building-2" class="app-icon" aria-hidden="true"></i>
                 <strong>Bedrijf</strong>
-                <span>Offerte</span>
+                <span>Horeca, kantoor of gebouw · offerte</span>
               </button>
             </div>
           </section>
@@ -92,24 +95,23 @@
           <section class="native-card">
             <div class="native-card-head">
               <span>2 van 4</span>
-              <h2>Wanneer komen we?</h2>
+              <h2>Kies een vrij moment</h2>
             </div>
-            <p class="screen-subtitle">Kies 1 vrij moment.</p>
             <div class="native-slot-row">
-              <button><i class="app-icon icon-sun" aria-hidden="true"></i>Ma 15 jul<br /><strong>Ochtend</strong></button>
-              <button class="is-active"><i class="app-icon icon-clock" aria-hidden="true"></i>Wo 17 jul<br /><strong>Middag</strong></button>
-              <button><i class="app-icon icon-moon" aria-hidden="true"></i>Vr 19 jul<br /><strong>Namiddag</strong></button>
+              <button><i data-lucide="sun" class="app-icon" aria-hidden="true"></i>Ma 15 jul<br /><strong>Ochtend</strong></button>
+              <button class="is-active"><i data-lucide="clock-3" class="app-icon" aria-hidden="true"></i>Wo 17 jul<br /><strong>Middag</strong></button>
+              <button><i data-lucide="moon" class="app-icon" aria-hidden="true"></i>Vr 19 jul<br /><strong>Namiddag</strong></button>
             </div>
           </section>
 
           <section class="native-card">
             <div class="native-card-head">
               <span>3 van 4</span>
-              <h2>Waar moeten we zijn?</h2>
+              <h2>Vul uw adres in</h2>
             </div>
             <div class="address-helper">
-              <i class="app-icon icon-location" aria-hidden="true"></i>
-              <span>Adres, verdieping en parking helpen ons sneller werken.</span>
+              <i data-lucide="map-pin" class="app-icon" aria-hidden="true"></i>
+              <span>Verdieping en parking helpen ons op tijd te zijn.</span>
             </div>
             <div class="native-form-grid">
               <input placeholder="Naam" />
@@ -135,24 +137,24 @@
           <section class="native-card deposit-native">
             <div class="native-card-head">
               <span>4 van 4</span>
-              <h2>Maak uw afspraak vast</h2>
+              <h2>Bevestig uw afspraak</h2>
             </div>
             <strong>€25 voorschot</strong>
             <p>Dit gaat later van de factuur af. Zo is uw plaats zeker.</p>
-            <a class="native-primary" href="#"><i class="app-icon icon-card" aria-hidden="true"></i>Betaal €25 en klaar</a>
+            <a class="native-primary" href="#"><i data-lucide="credit-card" class="app-icon" aria-hidden="true"></i>Betaal €25 en bevestig</a>
           </section>
 
           <section class="native-card" id="afspraak">
             <div class="native-card-head">
               <span>Mijn afspraak</span>
-              <h2>Uw meester komt eraan</h2>
+              <h2>Uw technieker komt eraan</h2>
             </div>
             <div class="live-tracker">
               <div class="tracker-map" aria-label="Route van RIOLFIX technieker">
-                <span class="map-dot start"><i class="app-icon icon-home" aria-hidden="true"></i></span>
+                <span class="map-dot start"><i data-lucide="warehouse" class="app-icon" aria-hidden="true"></i></span>
                 <span class="map-route"></span>
-                <span class="map-van"><i class="app-icon icon-location" aria-hidden="true"></i></span>
-                <span class="map-dot end"><i class="app-icon icon-pipe" aria-hidden="true"></i></span>
+                <span class="map-van"><i data-lucide="truck" class="app-icon" aria-hidden="true"></i></span>
+                <span class="map-dot end"><i data-lucide="house" class="app-icon" aria-hidden="true"></i></span>
               </div>
               <div class="tracker-eta">
                 <span>Geschatte aankomst</span>
@@ -165,146 +167,56 @@
                   <strong>Tom · RIOLFIX</strong>
                   <span>Wagen 04 · hogedruk + camera</span>
                 </div>
-                <a href="tel:+32488123456"><i class="app-icon icon-phone" aria-hidden="true"></i></a>
+                <a href="tel:+32488123456" aria-label="Bel technieker"><i data-lucide="phone" class="app-icon" aria-hidden="true"></i></a>
               </div>
               <div class="tracking-steps" aria-label="Status van de interventie">
-                <span class="is-done"><i class="app-icon icon-check" aria-hidden="true"></i>Aanvraag bevestigd</span>
-                <span class="is-done"><i class="app-icon icon-check" aria-hidden="true"></i>Meester vertrokken</span>
-                <span class="is-current"><i class="app-icon icon-location" aria-hidden="true"></i>Onderweg</span>
-                <span><i class="app-icon icon-pipe" aria-hidden="true"></i>Werken starten</span>
-                <span><i class="app-icon icon-card" aria-hidden="true"></i>Rapport & factuur</span>
+                <span class="is-done"><i data-lucide="circle-check" class="app-icon" aria-hidden="true"></i>Afspraak bevestigd</span>
+                <span class="is-current"><i data-lucide="navigation" class="app-icon" aria-hidden="true"></i>Onderweg</span>
+                <span><i data-lucide="wrench" class="app-icon" aria-hidden="true"></i>Aan het werk</span>
+                <span><i data-lucide="file-check-2" class="app-icon" aria-hidden="true"></i>Klaar</span>
               </div>
             </div>
             <div class="booking-ticket">
               <span>Bevestigd</span>
-              <strong>Grote buis schoonmaken</strong>
+              <strong>Hoofdleiding reinigen</strong>
               <p>Wo 17 juli · 13:00-15:00</p>
               <p>Plantin en Moretuslei 124, Antwerpen</p>
             </div>
             <div class="native-quick-actions">
-              <button><i class="app-icon icon-calendar" aria-hidden="true"></i>Andere datum</button>
-              <button><i class="app-icon icon-close" aria-hidden="true"></i>Stop afspraak</button>
-              <button><i class="app-icon icon-photo" aria-hidden="true"></i>Foto sturen</button>
-              <a href="https://wa.me/32488123456"><i class="app-icon icon-chat" aria-hidden="true"></i>WhatsApp</a>
+              <button><i data-lucide="calendar-clock" class="app-icon" aria-hidden="true"></i>Verplaats</button>
+              <button><i data-lucide="x" class="app-icon" aria-hidden="true"></i>Annuleer</button>
+              <button><i data-lucide="image-plus" class="app-icon" aria-hidden="true"></i>Foto</button>
+              <a href="https://wa.me/32488123456"><i data-lucide="message-circle" class="app-icon" aria-hidden="true"></i>Chat</a>
             </div>
           </section>
 
           <section class="native-card" id="rapporten">
             <div class="native-card-head">
               <span>Klaar</span>
-              <h2>Werk is gedaan</h2>
+              <h2>Uw reiniging is klaar</h2>
             </div>
             <div class="mini-photo-row">
               <img src="assets/before-after-yard-1.png" alt="Voor en na reiniging" />
               <img src="assets/before-after-street-1.png" alt="Voor en na straatkolk" />
             </div>
             <div class="simple-result">
-              <span><i class="app-icon icon-check" aria-hidden="true"></i>Buis schoon</span>
-              <span><i class="app-icon icon-water" aria-hidden="true"></i>Water loopt</span>
-              <span><i class="app-icon icon-calendar" aria-hidden="true"></i>Terug binnen 6 maanden</span>
+              <span><i data-lucide="circle-check" class="app-icon" aria-hidden="true"></i>Leiding gereinigd</span>
+              <span><i data-lucide="waves" class="app-icon" aria-hidden="true"></i>Water loopt goed</span>
+              <span><i data-lucide="calendar-clock" class="app-icon" aria-hidden="true"></i>Opnieuw over 6 maanden</span>
             </div>
-            <a class="native-primary" href="#plan"><i class="app-icon icon-check" aria-hidden="true"></i>Plan opnieuw</a>
-          </section>
-
-          <section class="native-card">
-            <div class="native-card-head">
-              <span>Berichten</span>
-              <h2>Wij herinneren u</h2>
-            </div>
-            <div class="notification-list">
-              <p><i class="app-icon icon-bell" aria-hidden="true"></i>Na spoed: €20 korting.</p>
-              <p><i class="app-icon icon-calendar" aria-hidden="true"></i>7 dagen vooraf.</p>
-              <p><i class="app-icon icon-clock" aria-hidden="true"></i>1 dag vooraf.</p>
-              <p><i class="app-icon icon-repeat" aria-hidden="true"></i>Na 6 maanden.</p>
-            </div>
-          </section>
-
-          <section class="native-card" id="b2b">
-            <div class="native-card-head">
-              <span>Bedrijven</span>
-              <h2>Alle plaatsen</h2>
-            </div>
-            <div class="location-list">
-              <article>
-                <strong>Restaurant Antwerpen Centrum</strong>
-                <span>Volgende keer: 18 juli · gepland</span>
-              </article>
-              <article>
-                <strong>Appartement Berchem</strong>
-                <span>Rapporten · facturen · contract onderhoud</span>
-              </article>
-              <article>
-                <strong>Kantoor Deurne</strong>
-                <span>Emergency request · meerdere adressen</span>
-              </article>
-            </div>
-          </section>
-
-          <section class="native-card" id="prijzen">
-            <div class="native-card-head">
-              <span>Geld</span>
-              <h2>Wat kost het?</h2>
-            </div>
-            <div class="native-price-list">
-              <span>Gewoon ontstoppen <strong>vanaf €129</strong></span>
-              <span>Spoed <strong>vanaf €179</strong></span>
-              <span>Camera kijken <strong>vanaf €149</strong></span>
-              <span>Schoonmaak met planning <strong>vanaf €109</strong></span>
-              <span>Bedrijf <strong>offerte</strong></span>
-            </div>
-            <p class="screen-subtitle">We zeggen de prijs voor we starten.</p>
-          </section>
-
-          <section class="native-card" id="diagnose">
-            <div class="native-card-head">
-              <span>Ik weet het niet</span>
-              <h2>Wat ziet u?</h2>
-            </div>
-            <div class="native-tags light-tags">
-              <button>Water gaat traag weg</button>
-              <button>Geluid in buis</button>
-              <button>Vieze geur</button>
-              <button>Komt terug</button>
-              <button>Na regen</button>
-            </div>
-            <div class="diagnose-result">
-              <strong>Wij denken:</strong>
-              <span>Camera kijken + schoonmaken. Komt water terug? Bel spoed.</span>
-            </div>
-          </section>
-
-          <section class="native-card trust-native">
-            <div class="native-card-head">
-              <span>Waarom veilig?</span>
-              <h2>Duidelijk en eerlijk</h2>
-            </div>
-            <div class="native-checks">
-              <span>Reviews</span>
-              <span>Geen geheime kosten</span>
-              <span>In Antwerpen</span>
-              <span>Factuur</span>
-              <span>Tips na werk</span>
-            </div>
+            <a class="native-primary" href="#plan"><i data-lucide="repeat-2" class="app-icon" aria-hidden="true"></i>Plan volgende reiniging</a>
           </section>
         </div>
 
         <nav class="native-tabbar" aria-label="App tabbar">
-          <a href="#home">Home</a>
-          <a href="#plan">Plan</a>
-          <a href="#afspraak">Afspraak</a>
-          <a href="#prijzen">Prijzen</a>
-          <a href="#b2b">B2B</a>
+          <a href="#home"><i data-lucide="house" class="app-icon" aria-hidden="true"></i><span>Home</span></a>
+          <a href="#plan"><i data-lucide="calendar-plus" class="app-icon" aria-hidden="true"></i><span>Boeken</span></a>
+          <a href="#afspraak"><i data-lucide="route" class="app-icon" aria-hidden="true"></i><span>Volgen</span></a>
+          <a href="#rapporten"><i data-lucide="file-check-2" class="app-icon" aria-hidden="true"></i><span>Rapport</span></a>
         </nav>
       </section>
-
-      <aside class="app-side-note">
-        <p class="eyebrow blue">Prototype</p>
-        <h2>Super simpele app.</h2>
-        <p>
-          Grote knoppen, korte woorden en duidelijke stappen. Openen, kiezen, klaar.
-        </p>
-        <a class="btn primary" href="index.html">Terug naar website</a>
-      </aside>
     </main>
+    <script src="assets/lucide.min.js"></script>
+    <script>lucide.createIcons();</script>
   </body>
 </html>

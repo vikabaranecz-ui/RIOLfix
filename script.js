@@ -2,6 +2,10 @@ const header = document.querySelector("[data-header]");
 const toggle = document.querySelector("[data-menu-toggle]");
 const mobileNav = document.querySelector("[data-mobile-nav]");
 
+if (window.lucide) {
+  window.lucide.createIcons();
+}
+
 const setHeaderState = () => {
   header.classList.toggle("is-scrolled", window.scrollY > 24);
 };
